@@ -1,0 +1,183 @@
+/* Formulários e tabelas compartilhados pelos cadastros e orçamentos. */
+main {
+    max-width: 900px;
+}
+
+.caixaMenu {
+    text-align: left;
+}
+
+.caixaMenu:has(> table) {
+    overflow-x: auto;
+}
+
+.caixaMenu + .caixaMenu {
+    margin-top: 30px;
+}
+
+.caixaMenu h2 {
+    margin: 0 0 26px;
+    color: var(--ink);
+    font-size: 25px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo > label:first-child {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--graphite);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.campo input:not([type="radio"]),
+.campo select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cfdce3;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.campo input:not([type="radio"]):focus,
+.campo select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(40, 169, 223, 0.14);
+}
+
+.campo input:not([type="radio"]):disabled,
+.campo select:disabled {
+    color: #7a858d;
+    background: #f1f5f7;
+    cursor: not-allowed;
+}
+
+.campo input[type="radio"] {
+    margin: 2px 6px 0 0;
+    accent-color: var(--blue-dark);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.campo input[type="radio"] + label {
+    margin-right: 18px;
+    color: #5f6870;
+    font-size: 15px;
+}
+
+button,
+.botao-link {
+    padding: 11px 20px;
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    color: #fff;
+    background: var(--blue);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+button:hover:not(:disabled),
+.botao-link:hover {
+    background: var(--blue-dark);
+}
+
+.botao-link {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.botao-link:focus-visible {
+    outline: 2px solid var(--blue-dark);
+    outline-offset: 3px;
+}
+
+.acoes-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.itens-orcamento {
+    border: 1px solid #cfdce3;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+#btn-add-item {
+    margin-bottom: 15px;
+}
+
+.mensagem-tabela {
+    text-align: center;
+}
+
+#status-orcamento {
+    margin-top: 12px;
+}
+
+td button + button {
+    margin-left: 8px;
+    color: var(--blue-dark);
+    background: #fff;
+}
+
+td button + button:hover:not(:disabled) {
+    color: #fff;
+    background: var(--blue-dark);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #dfe7eb;
+    text-align: left;
+}
+
+th {
+    color: var(--blue-dark);
+    background: #f3fafc;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background: #f8fcfd;
+}
+
+td button {
+    padding: 7px 11px;
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+    .caixaMenu {
+        padding: 32px 20px;
+    }
+
+    table {
+        min-width: 640px;
+    }
+
+    .caixaMenu:has(table) {
+        overflow-x: auto;
+    }
+}
