@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP - Início</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/clientes.css">
+    <link rel="stylesheet" href="css/orcamento.css">
+</head>
+<body class="app">
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <aside class="barra-lateral">
+        <a class="brand" href="#inicio" aria-label="SCP - Início"><img src="logo.png" alt="Logo SCP"><span>Sistema de gestão</span></a>
+        <button class="alternar-menu" type="button" aria-expanded="false" aria-controls="navegacao">Menu <span aria-hidden="true">☰</span></button>
+        <div id="navegacao">
+            <span class="menu-title">MENU PRINCIPAL</span>
+            <nav aria-label="Menu principal">
+                <a href="#inicio" data-secao="inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Início</span></a>
+                <a href="#clientes" data-secao="clientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></svg><span>Clientes</span></a>
+                <a href="#categorias" data-secao="categorias"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Categorias</span></a>
+                <a href="#produtos" data-secao="produtos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v9l-9 5-9-5V8zM3 8l9 5 9-5m-9 5v9M7.5 5.5l9 5v4"/></svg><span>Produtos</span></a>
+                <a href="#orcamentos" data-secao="orcamentos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8m-8 4h6"/></svg><span>Orçamentos</span></a>
+            </nav>
+            <div class="rodape-menu"><span>SCP</span><p>Seu negócio, organizado.</p><a href="index.html">← Voltar ao login</a></div>
+        </div>
+    </aside>
+    <main class="workspace" id="conteudo" tabindex="-1">
+        <header class="cabecalho-conteudo">
+            <div><span class="eyebrow">SCP / GESTÃO</span><h1 id="titulo-secao" tabindex="-1">Início</h1><p id="descricao-secao">Tudo o que você precisa para gerenciar seu negócio.</p></div>
+        </header>
+        <div id="area-conteudo"></div>
+        <noscript>Ative o JavaScript para acessar os cadastros e orçamentos.</noscript>
+    </main>
+    <template id="tela-inicio">
+        <section class="painel inicio" aria-label="Início">
+            <h2 class="titulo-atalhos">Acesso rápido</h2>
+            <div class="atalhos">
+                    <a class="atalho" href="#clientes"><span class="atalho-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></svg></span><h3>Clientes</h3><p>Cadastre e consulte seus clientes.</p><span class="atalho-abrir">Abrir clientes <span aria-hidden="true">→</span></span></a>
+                    <a class="atalho" href="#categorias"><span class="atalho-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><h3>Categorias</h3><p>Organize as categorias do catálogo.</p><span class="atalho-abrir">Abrir categorias <span aria-hidden="true">→</span></span></a>
+                    <a class="atalho" href="#produtos"><span class="atalho-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5v9l-9 5-9-5V8zM3 8l9 5 9-5m-9 5v9M7.5 5.5l9 5v4"/></svg></span><h3>Produtos</h3><p>Gerencie produtos e valores de venda.</p><span class="atalho-abrir">Abrir produtos <span aria-hidden="true">→</span></span></a>
+                    <a class="atalho" href="#orcamentos"><span class="atalho-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8m-8 4h6"/></svg></span><h3>Orçamentos</h3><p>Monte e acompanhe seus orçamentos.</p><span class="atalho-abrir">Abrir orçamentos <span aria-hidden="true">→</span></span></a>
+            </div>
+        </section>
+    </template>
+    <template id="tela-clientes">
+        <section class="painel" aria-label="Clientes">
+        
+        <div class="caixaMenu">
+            <h2>Cadastro de Clientes</h2>
+            
+            <form id="form-cliente" action="#">
+                <div class="campo">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" disabled placeholder="Gerado automaticamente">
+                </div>
+
+                <div class="campo">
+                    <label>Tipo de Cliente:</label>
+                    <input type="radio" id="pf" name="tipo_cliente" value="PF" checked>
+                    <label for="pf">Pessoa Física</label>
+                    
+                    <input type="radio" id="pj" name="tipo_cliente" value="PJ">
+                    <label for="pj">Pessoa Jurídica</label>
+                </div>
+
+                <div class="campo">
+                    <label for="documento">CPF:</label>
+                    <input type="text" id="documento" required placeholder="000.000.000-00" inputmode="numeric" maxlength="14" spellcheck="false">
+                </div>
+
+                <div class="campo">
+                    <label for="nome">Nome do Cliente:</label>
+                    <input type="text" id="nome" required placeholder="Digite o nome completo">
+                </div>
+
+                <div>
+                    <button id="botao-salvar" type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="caixaMenu">
+            <h2>Lista de Clientes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Tipo</th>
+                        <th>Documento</th>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-clientes">
+                    <tr><td class="mensagem-tabela" colspan="5">Carregando...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    
+        </section>
+    </template>
+    <template id="tela-categorias">
+        <section class="painel" aria-label="Categorias">
+        
+        <div class="caixaMenu">
+            <h2>Cadastro de Categorias</h2>
+            
+            <form id="form-categoria" action="#">
+                <div class="campo">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" disabled placeholder="Gerado automaticamente">
+                </div>
+
+                <div class="campo">
+                    <label for="descricao">Descrição da Categoria:</label>
+                    <input type="text" id="descricao" required placeholder="Ex: Informática, Alimentos, etc.">
+                </div>
+
+                <div>
+                    <button id="botao-salvar" type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="caixaMenu">
+            <h2>Lista de Categorias</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-categorias">
+                    <tr><td class="mensagem-tabela" colspan="3">Carregando...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    
+        </section>
+    </template>
+    <template id="tela-produtos">
+        <section class="painel" aria-label="Produtos">
+        
+        <div class="caixaMenu">
+            <h2>Cadastro de Produtos</h2>
+            
+            <form id="form-produto" action="#">
+                <div class="campo">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" disabled placeholder="Gerado automaticamente">
+                </div>
+
+                <div class="campo">
+                    <label for="categoriaprodutoid">Categoria:</label>
+                    <select id="categoriaprodutoid" required disabled aria-describedby="status-categorias">
+                        <option value="">Carregando categorias...</option>
+                    </select>
+                    <p id="status-categorias" role="status"></p>
+                    <div class="acoes-formulario">
+                        <button type="button" id="btn-atualizar-categorias">Atualizar categorias</button>
+                        <a class="botao-link" href="#categorias">Cadastrar categoria</a>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="dsproduto">Descrição do Produto:</label>
+                    <input type="text" id="dsproduto" required placeholder="Digite a descrição do produto">
+                </div>
+
+                <div class="campo">
+                    <label for="obsproduto">Observação:</label>
+                    <input type="text" id="obsproduto" placeholder="Observações adicionais">
+                </div>
+
+                <div class="campo">
+                    <label for="vl_venda_produto">Valor de Venda (R$):</label>
+                    <input type="number" min="0" step="0.01" id="vl_venda_produto" required placeholder="0.00">
+                </div>
+
+                <div class="campo">
+                    <label for="status_produto">Status:</label>
+                    <input type="text" id="status_produto" required placeholder="Ex: Ativo / Inativo">
+                </div>
+
+                <div>
+                    <button id="botao-salvar" type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="caixaMenu">
+            <h2>Lista de Produtos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Categoria</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-produtos">
+                    <tr>
+                        <td colspan="6" class="mensagem-tabela">Carregando produtos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        </section>
+    </template>
+    <template id="tela-orcamentos">
+        <section class="painel" aria-label="Orçamentos">
+        
+        <div class="caixaMenu">
+            <h2>Novo Orçamento</h2>
+            
+            <form id="form-orcamento" action="#">
+                
+                <div class="campo">
+                    <label for="orcamentoid">Código do Orçamento:</label>
+                    <input type="text" id="orcamentoid" disabled placeholder="Gerado automaticamente">
+                </div>
+
+                <div class="campo">
+                    <label for="clienteid">Cliente:</label>
+                    <select id="clienteid" required disabled aria-describedby="status-clientes">
+                        <option value="">Carregando clientes...</option>
+                    </select>
+                    <p id="status-clientes" role="status">Carregando clientes cadastrados...</p>
+                    <div class="acoes-formulario">
+                        <button type="button" id="btn-atualizar-clientes" disabled>Atualizar clientes</button>
+                        <a class="botao-link" href="#clientes">Cadastrar cliente</a>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="dt_orcamento">Data do Orçamento:</label>
+                    <input type="datetime-local" id="dt_orcamento" required>
+                </div>
+
+                <div class="campo">
+                    <label for="dt_validade_orcamento">Validade do Orçamento:</label>
+                    <input type="datetime-local" id="dt_validade_orcamento" required>
+                </div>
+
+                
+                <div class="itens-orcamento">
+                    <h3>Adicionar Produtos ao Orçamento</h3>
+                    
+                    <div class="campo">
+                        <label for="item_produtoid">Produto:</label>
+                        <select id="item_produtoid" disabled aria-describedby="status-produtos">
+                            <option value="">Carregando produtos...</option>
+                        </select>
+                        <p id="status-produtos" role="status"></p>
+                        <div class="acoes-formulario">
+                            <button type="button" id="btn-atualizar-produtos" disabled>Atualizar produtos</button>
+                            <a class="botao-link" href="#produtos">Cadastrar produto</a>
+                        </div>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="item_qt_produto">Quantidade:</label>
+                        <input type="number" min="1" step="1" id="item_qt_produto" placeholder="Ex: 2">
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="item_vl_unitario">Valor Unitário (R$):</label>
+                        <input type="number" min="0" step="0.01" id="item_vl_unitario" placeholder="Selecione um produto" aria-describedby="ajuda-valor-unitario">
+                        <p id="ajuda-valor-unitario">Preenchido com o valor de venda do produto. Você pode ajustar o preço para este orçamento.</p>
+                    </div>
+
+                    <button type="button" id="btn-add-item" disabled>+ Adicionar Item</button>
+
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Qtd</th>
+                                <th>Vl. Unitário</th>
+                                <th>Vl. Total</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-itens-temporarios">
+                            <tr>
+                                <td colspan="5" class="mensagem-tabela">Nenhum item adicionado ainda.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="campo">
+                    <label for="vl_total_orcamento">Valor Total do Orçamento (R$):</label>
+                    
+                    <input type="number" step="0.01" id="vl_total_orcamento" disabled placeholder="0.00">
+                </div>
+
+                <div>
+                    <button id="botao-salvar" type="submit" disabled>Salvar Orçamento Completo</button>
+                </div>
+                <p id="status-orcamento" role="status"></p>
+            </form>
+        </div>
+
+        
+        <div class="caixaMenu">
+            <h2>Orçamentos Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cód.</th>
+                        <th>Cliente ID</th>
+                        <th>Data</th>
+                        <th>Validade</th>
+                        <th>Total (R$)</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-orcamentos">
+                    <tr>
+                        <td colspan="6" class="mensagem-tabela">Carregando orçamentos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <dialog id="visualizacao-orcamento" aria-labelledby="titulo-documento">
+            <div class="acoes-documento">
+                <h2 id="titulo-documento">Visualizar orçamento</h2>
+                <div>
+                    <button type="button" id="imprimir-orcamento" disabled>Imprimir / Salvar PDF</button>
+                    <button type="button" id="fechar-orcamento" autofocus>Fechar</button>
+                </div>
+            </div>
+            <p id="status-documento" role="status"></p>
+            <article id="documento-orcamento" class="documento-orcamento" hidden>
+                <header class="documento-cabecalho">
+                    <img src="logo.png" alt="SCP" width="80" height="80">
+                    <div><span class="eyebrow">ORÇAMENTO</span><h2 data-documento="codigo"></h2></div>
+                </header>
+                <dl class="documento-dados">
+                    <div><dt>Cliente</dt><dd data-documento="cliente"></dd></div>
+                    <div><dt>CPF / CNPJ</dt><dd data-documento="cpf"></dd></div>
+                    <div><dt>Data do orçamento</dt><dd data-documento="data"></dd></div>
+                    <div><dt>Válido até</dt><dd data-documento="validade"></dd></div>
+                </dl>
+                <div class="documento-itens">
+                    <table aria-label="Itens do orçamento salvo">
+                        <thead><tr><th scope="col">Produto</th><th scope="col">Qtd.</th><th scope="col">Valor unitário</th><th scope="col">Subtotal</th></tr></thead>
+                        <tbody id="itens-documento"></tbody>
+                    </table>
+                </div>
+                <footer class="documento-total"><span>Total do orçamento</span><strong data-documento="total"></strong></footer>
+            </article>
+        </dialog>
+        </section>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/comum.js"></script>
+    <script src="js/cadastro.js"></script>
+    <script src="js/clientes.js"></script>
+    <script src="js/categorias.js"></script>
+    <script src="js/produtos.js"></script>
+    <script src="js/orcamento.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

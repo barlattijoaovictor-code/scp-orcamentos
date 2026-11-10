@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="login-layout">
+        <section class="brand-panel" aria-label="Sistema SCP">
+            <img src="logo.png" alt="Logo SCP" class="logo">
+            <div class="brand-copy">
+                <span class="eyebrow">SCP</span>
+                <h1>Soluções que<br>movem seu negócio.</h1>
+                <p>Gerencie produtos, clientes e orçamentos em um só lugar.</p>
+            </div>
+            <div class="circuit-line" aria-hidden="true"></div>
+        </section>
+
+        <section class="login-card" aria-labelledby="login-title">
+            <div class="card-heading">
+                <span class="eyebrow">DEMONSTRAÇÃO</span>
+                <h2 id="login-title">Bem-vindo de volta</h2>
+                <p>Entre com seus dados para acessar o sistema.</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="field">
+                    <label for="usuario" class="sr-only">Usuário</label>
+                    <span class="field-icon" aria-hidden="true">👤</span>
+                    <input type="text" id="usuario" name="usuario" autocomplete="username" required placeholder="Seu usuário" aria-label="Usuário">
+                </div>
+
+                <div class="field">
+                    <label for="senha" class="sr-only">Senha</label>
+                    <span class="field-icon" aria-hidden="true">🔒</span>
+                    <input type="password" id="senha" autocomplete="current-password" required placeholder="Sua senha" aria-label="Senha">
+                </div>
+
+                <button type="submit">Entrar no sistema <span aria-hidden="true">→</span></button>
+                <p id="login-message" class="login-message" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
